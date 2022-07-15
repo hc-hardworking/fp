@@ -8,6 +8,9 @@
 
         <module>service-core</module>
         <module>service-base</module>
+        <module>service-sms</module>
+        <module>service-gateway</module>
+        <module>service-oss</module>
 
     </modules>
     <parent>
@@ -203,6 +206,16 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
     </build>
+
 
 </project>

@@ -5,9 +5,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan({"com.yhc.srb"})
+@ComponentScan({"com.yhc.srb","com.yhc.common"})
 public class ServiceCoreApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ServiceCoreApplication.class,args);
+        try {
+            SpringApplication.run(ServiceCoreApplication.class,args);
+        }catch (Throwable e){
+            e.printStackTrace();
+        }
+
     }
 }
